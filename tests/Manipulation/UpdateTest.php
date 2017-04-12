@@ -58,4 +58,12 @@ class UpdateTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame($values, $this->query->getValues());
     }
+    
+    public function test_itShouldSetZeroAndFalseValues() {
+        $values = ['empty' => '', 'strZero' => '0', 'intZero' => 0, 'false' => false ];
+        
+        $this->query->setValues( $values );
+        
+        $this->assertSame( $values, $this->query->getValues() );
+    }
 }

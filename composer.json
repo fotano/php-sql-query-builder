@@ -1,6 +1,6 @@
 {
-    "name":"nilportugues/sql-query-builder",
-    "description":"An elegant lightweight and efficient SQL QueryInterface BuilderInterface supporting bindings and complicated query generation.",
+    "name":"tsillus/sql-query-builder",
+    "description":" A fork of nilportugues/sql-query-builder that fixes some bugs. \n An elegant lightweight and efficient SQL QueryInterface BuilderInterface supporting bindings and complicated query generation.",
     "keywords": [ "sql", "mysql", "query", "builder", "query builder", "orm"],
     "type":"library",
     "license":"MIT",
@@ -18,7 +18,13 @@
             "email":"woody.gilk@gmail.com",
             "homepage":"http://shadowhand.me/",
             "role":"Contributor"
+        },
+        {
+            "name":"Torsten Sillus",
+            "email":"torstensillus@gmail.com",
+            "role":"Contributor"
         }
+
     ],
     "autoload":{
         "psr-4":{
