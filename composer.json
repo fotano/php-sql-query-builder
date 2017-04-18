@@ -39,7 +39,8 @@
     "require":
     {
         "php": ">=5.5",
-        "nilportugues/sql-query-formatter": "~1.2"
+        "nilportugues/sql-query-formatter": "~1.2",
+        "tsillus/sql-query-builder": "1.0.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*",
