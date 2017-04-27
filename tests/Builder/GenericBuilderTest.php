@@ -281,4 +281,4 @@ QUERY;
 
         $this->assertSame($expected, (string) $query);
     }
-}
+};

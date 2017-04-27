@@ -475,6 +475,26 @@ SQL;
         $expected = array(':v1' => 1, ':v2' => 2);
         $this->assertEquals($expected, $this->writer->getValues());
     }
+    
+    /**
+     * @test
+     */
+    public function _itShouldBeAbleToCountWithWhereStatement()
+    {
+        $query = $this->writer->select()->setTable( 'user' );
+        
+        $query->where()
+              ->eq('prename', 'b');
+        
+        $query->count();
+        
+        $expected = <<<QUERY
+SELECT COUNT(*) FROM user WHERE (user.prename = :v1)
+QUERY;
+        
+        $this->assertSame($expected, (string) $query );
+        
+    }
 
     /**
      * @test
