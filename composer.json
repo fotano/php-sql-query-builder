@@ -28,6 +28,7 @@
         {
             "name":"Fotano",
             "email":"dev@fotano.de",
+            "homepage":"https://www.fotano.de/",
             "role":"Contributor"
         }
 
@@ -46,7 +47,7 @@
     {
         "php": ">=5.5",
         "nilportugues/sql-query-formatter": "~1.2",
-        "tsillus/sql-query-builder": "~1.0",
+        "tsillus/sql-query-builder": ">=1.0",
         "fotano/sql-query-builder": "1.5.0.x-dev"
     },
     "require-dev": {
