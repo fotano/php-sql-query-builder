@@ -46,7 +46,7 @@
         "php": ">=5.5",
         "nilportugues/sql-query-formatter": "~1.2",
         "tsillus/sql-query-builder": "1.0.x-dev",
-        "fotano/sql-query-builder" :"1.0.0"
+        "fotano/sql-query-builder" : "1.0.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*",
@@ -60,7 +60,7 @@
     "minimum-stability": "stable",
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.0"
+            "dev-master": "1.0.x-dev"
         }
     }
 }
