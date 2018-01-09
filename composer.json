@@ -1,5 +1,5 @@
 {
-    "name":"tsillus/sql-query-builder",
+    "name":"fotano/sql-query-builder",
     "description":" A fork of nilportugues/sql-query-builder that fixes some bugs. \n An elegant lightweight and efficient SQL QueryInterface BuilderInterface supporting bindings and complicated query generation.",
     "keywords": [ "sql", "mysql", "query", "builder", "query builder", "orm"],
     "type":"library",
@@ -23,6 +23,11 @@
             "name":"Torsten Sillus",
             "email":"torstensillus@gmail.com",
             "role":"Contributor"
+        },
+        {
+            "name":"Fotano",
+            "email":"dev@fotano.de",
+            "role":"Contributor"
         }
 
     ],
@@ -40,7 +45,8 @@
     {
         "php": ">=5.5",
         "nilportugues/sql-query-formatter": "~1.2",
-        "tsillus/sql-query-builder": "1.0.x-dev"
+        "tsillus/sql-query-builder": "1.0.x-dev",
+        "fotano/sql-query-builder" :"1.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*",
@@ -54,7 +60,7 @@
     "minimum-stability": "stable",
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "1.0.0"
         }
     }
 }
