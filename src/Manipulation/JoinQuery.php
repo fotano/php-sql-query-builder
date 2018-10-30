@@ -119,16 +119,27 @@ class JoinQuery
     {
         $select->isJoin(true);
         $table = $select->getTable()->getName();
-
+        
         if (!isset($this->joins[$table])) {
-            $newColumn = array($selfColumn);
-            $select->joinCondition()->equals(
-                $refColumn,
-                SyntaxFactory::createColumn($newColumn, $this->select->getTable())
-            );
+            if( is_array( $selfColumn ) && is_array( $refColumn ) && count( $selfColumn ) == count( $refColumn) ){
+                for( $i = 0; $i < count( $selfColumn ); $i++ ){
+                    $newColumn = array( $selfColumn[$i] );
+                    $select->joinCondition()->equals(
+                        $refColumn[$i],
+                        is_numeric( $selfColumn[$i]) ? intval( $selfColumn[$i]) :  SyntaxFactory::createColumn( $newColumn, $this->select->getTable())
+                    );
+                }
+            }
+            else{
+                $newColumn = array($selfColumn);
+                $select->joinCondition()->equals(
+                    $refColumn,
+                    SyntaxFactory::createColumn($newColumn, $this->select->getTable())
+                );
+            }
             $this->joins[$table] = $select;
         }
-
+        
         return $this->joins[$table];
     }
 
